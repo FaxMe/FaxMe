@@ -74,16 +74,17 @@
             <p>Please make a payment before submitting the fax request. After payment, you can submit the fax details and proof of payment.</p>
             <!-- PayPal Button -->
             <div class="paypal-button">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="your-paypal-email@example.com">
-                    <input type="hidden" name="item_name" value="FaxMe.org Service">
-                    <input type="hidden" name="amount" value="10.00"> <!-- Set your price here -->
-                    <input type="hidden" name="currency_code" value="USD">
-                    <input type="hidden" name="return" value="http://www.FAXME.ORG/thankyou">
-                    <input type="hidden" name="cancel_return" value="http://www.FAXME.ORG/cancel">
-                    <button type="submit" class="paypal-button-submit">Pay Now with PayPal</button>
-                </form>
+               <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="3BZHKYX28YA7W" />
+  <input type="hidden" name="currency_code" value="USD" />
+  <input type="hidden" name="amount" value="10.00" /> <!-- Price for sending fax -->
+  <input type="hidden" name="return" value="http://www.FAXME.ORG/thankyou" /> <!-- Redirect after payment -->
+  <input type="hidden" name="cancel_return" value="http://www.FAXME.ORG/cancel" /> <!-- Redirect if canceled -->
+  <input type="hidden" name="custom" value="fax_service_10_pages" /> <!-- Tracking for your service -->
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+</form>
+
             </div>
         </section>
 
