@@ -1,46 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FaxMe.org - Your Source for the Latest Sports News">
-  <title>FaxMe.org - Sports News</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FaxMe.org - Professional Faxing Service">
+    <title>FaxMe.org - Professional Faxing Service</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <div class="logo">FaxMe.org</div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#latest-news">Latest News</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">FaxMe.org</a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fax-form">Send Fax</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section id="home">
-      <h1>Welcome to FaxMe.org</h1>
-      <p>Your source for the latest sports news and updates!</p>
-    </section>
+    <main>
+        <section id="home">
+            <h1>Welcome to FaxMe.org</h1>
+            <p>Your professional faxing service. Send faxes from anywhere in the world!</p>
+        </section>
 
-    <section id="latest-news">
-      <h2>Latest Sports News</h2>
-      <div id="news-container">
-        <!-- Sports news articles will load here -->
-      </div>
-    </section>
+        <section id="fax-form">
+            <h2>Send a Fax</h2>
+            <p>Fill out the form below to send your fax. Payment is required before faxing. After payment, please provide proof of payment.</p>
 
-    <section id="about">
-      <h2>About FaxMe.org</h2>
-      <p>FaxMe.org is dedicated to providing the latest and most comprehensive sports news, analysis, and commentary.</p>
-    </section>
-  </main>
+            <form id="faxForm" action="mailto:faxmegroup@gmail.com" method="post" enctype="multipart/form-data">
+                <label for="sender-name">Sender Name:</label>
+                <input type="text" id="sender-name" name="sender-name" required>
 
-  <footer>
-    <p>&copy; 2024 FaxMe.org - All Rights Reserved</p>
-  </footer>
+                <label for="sender-email">Sender Email:</label>
+                <input type="email" id="sender-email" name="sender-email" required>
+
+                <label for="sender-number">Sender Number:</label>
+                <input type="tel" id="sender-number" name="sender-number" required>
+
+                <label for="sender-address">Sender Address:</label>
+                <textarea id="sender-address" name="sender-address" required></textarea>
+
+                <label for="receiver-name">Receiver Name:</label>
+                <input type="text" id="receiver-name" name="receiver-name" required>
+
+                <label for="receiver-address">Receiver Address:</label>
+                <textarea id="receiver-address" name="receiver-address" required></textarea>
+
+                <label for="destination-email">Receiver Email:</label>
+                <input type="email" id="destination-email" name="destination-email" required>
+
+                <label for="fax-number">Receiver Fax Number:</label>
+                <input type="tel" id="fax-number" name="fax-number" required>
+
+                <label for="attachments">Attach Files (optional):</label>
+                <input type="file" id="attachments" name="attachments[]" multiple>
+
+                <label for="payment-proof">Proof of Payment:</label>
+                <input type="file" id="payment-proof" name="payment-proof" required>
+
+                <button type="submit">Submit Fax Request</button>
+            </form>
+        </section>
+
+        <section id="paypal">
+            <h2>Make Payment</h2>
+            <p>Please make a payment before submitting the fax request. After payment, you can submit the fax details and proof of payment.</p>
+            <!-- PayPal Button -->
+            <div class="paypal-button">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="your-paypal-email@example.com">
+                    <input type="hidden" name="item_name" value="FaxMe.org Service">
+                    <input type="hidden" name="amount" value="10.00"> <!-- Set your price here -->
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="return" value="http://www.FAXME.ORG/thankyou">
+                    <input type="hidden" name="cancel_return" value="http://www.FAXME.ORG/cancel">
+                    <button type="submit" class="paypal-button-submit">Pay Now with PayPal</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About FaxMe.org</h2>
+            <p>FaxMe.org is dedicated to providing efficient and secure faxing services globally. We aim to make faxing easier with an easy-to-use online platform.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FaxMe.org - All Rights Reserved</p>
+    </footer>
 </body>
+
 </html>
